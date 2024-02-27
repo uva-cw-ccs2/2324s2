@@ -1,0 +1,183 @@
+This section describes the requirements of the group assignment. 
+
+\subsection*{Teams}
+
+Form groups of around 4 students (5 is the maximum). Your tutorial teacher will help you with this.
+
+\subsection*{Dataset selection}
+Together with your group, you can select from one of the following datasets. The datasets are available on Canvas. 
+
+\begin{enumerate}
+	\item \emph{News dataset}: This dataset contains internet news data. More information can be found \href{https://www.kaggle.com/datasets/szymonjanowski/internet-articles-data-with-users-engagement?select=articles_data.csv}{here}.
+ 	\item \emph{Books dataset}: This dataset is a combination of two data sources, the \href{https://www.kaggle.com/datasets/jealousleopard/goodreadsbooks?resource=download}{Goodreads dataset} and the \href{https://www.kaggle.com/datasets/dylanjcastillo/7k-books-with-metadata}{7k Books dataset}.
+	\item \emph{Recipe dataset}: This dataset contains data on numerous recipes. 
+\end{enumerate}
+
+When working with one of these datasets, it's crucial to note that not all columns need to be taken into consideration. You should choose the relevant variables yourself and provide justification in your assignment for including or excluding specific information.
+
+The assignment will be centered around the choosen dataset. Your objective is to analyze the dataset in a data-scientific manner, and ultimately develop a recommender system.
+
+The group assignment will be evaluated based on the following key components:
+
+\begin{enumerate}
+\item A written research report.
+\item Demonstrated capability to write and apply code for preprocessing the data, conducting explorative data analyses, and building a simple knowledge-based or content-based recommender system.
+\item Quality and documentation of the provided code.
+\end{enumerate}
+
+Please find detailed information about these components next. 
+
+\section{Write a research report (50\% of final grade)}
+
+Ensure that the research report is written in a clear and understandable manner. It is encouraged to include citations from relevant academic articles to support your analysis. Additionally, you may cite the book (\cite{van_atteveldt_computational_2022}} )to justify specific techniques or decisions made. The research report is structured into four sections:
+
+\subsection{Introduction}
+\textit{Approximatly 0.5 - 1 page}
+\begin{itemize}
+	\item Briefly explain why you chose the specific dataset. 
+	\item Highlight its relevance, potential insights, and why it is the most interesting for your group's objectives.
+	\item State the overall aim of the Recommender system that you will develop in this assignment.
+	\begin{itemize}
+		\item For example, the Recommender System may focus on generating personalized book recommendations tailored to users' preferences, genres, and other users' behavior. Depending on the data you work with, this could be aimed at promoting reading habits or facilitating the sharing of relevant news within the community.
+	\end{itemize}
+\end{itemize}
+
+
+\subsection{Method Section}
+\textit{Approximatly 2.5 - 4.5 pages}
+
+\paragraph{Data Preprocessing}
+\begin{itemize}
+    \item Provide a detailed description of  the final selection of variables, including their data types and any transformations applied.
+    \item Explain the reasoning behind the approach taken for data preprocessing. Explain to your reader \emph{why} these preprocessing steps are needed. You can think of the following reasons:
+        \begin{itemize}
+            \item Visualizing the data: This helps to identify outliers, trends, or patterns within the dataset.
+            \item Computing summary statistics: This aids in understanding the distribution, central tendencies, and variability of variables.
+            \item Employing inductive techniques like topic modeling: This is particularly useful for textual data, where it helps to uncover underlying themes or topics.
+        \end{itemize}
+  \item Explain clearly how the preprocessing steps are needed for the successful exectution of these techniques. 
+\end{itemize}
+
+\paragraph{Exploratory Data Analysis (EDA)}
+\begin{itemize}
+    \item Describe the analytical strategy for EDA, including techniques such as visualization, summary statistics, or inductive methods like topic modeling.
+    \item Explain how these techniques will be used to gain insights into the dataset.
+	\item Justify the selection of these techniques and their relevance to the dataset. For example:
+	\begin{itemize}
+		\item Visualizing the data assists in detecting data quality issues or anomalies.
+		\item Summary statistics provide insights into the overall characteristics of the dataset.
+		\item Inductive techniques like topic modeling help in extracting meaningful information from unstructured textual data.
+	\end{itemize}
+\end{itemize}
+
+\paragraph{Recommender System development}
+\begin{itemize}
+\item Specify the type of recommender system being developed and provide rationale for this choice. 
+\item There are multiple decisions to consider at this stage, that you should elaborate on. 
+\begin{itemize}
+\item Specifically, explain whether you will build a knowledge-based or a content-based recommender system, and justify the choice of techniques used to create the recommendations. For example, you may choose to use cosine scores or soft-cosine scores.
+\item Additionally, clarify which variables are included in the final recommendations and why they were selected.
+\item Explain how the selected techniques will be utilized to build the recommender system.
+\end{itemize}
+\item Justify the suitability of the chosen recommender system type for addressing the objectives of the assignment as described in the Introduction section. 
+\end{itemize}
+
+\subsection{Result section}
+\textit{Approximatly 2.5 - 4.5 pages}
+
+\begin{itemize}
+\item Provide a comprehensive description of the dataset, including the number of observations and the types of variables present.
+\item Present the results of the Explorative Data Analysis (EDA) conducted on the dataset. 
+\begin{itemize}
+	\item This may include insights gained from visualization, summary statistics, or inductive methods like topic modeling. Describe patterns or trends that you have discovered during this analysis.
+\end{itemize}
+\item Demonstrate the functionality of the developed recommender system. 
+\begin{itemize}
+\item Explain how the system works and provide examples of recommendations generated for various types of input. 
+\item This demonstration should showcase how the recommender system works in providing relevant recommendations based on user preferences or content characteristics.
+\end{itemize}
+\end{itemize}
+
+\subsection{Short conclusion}
+
+\textit{Approximatly 0.5 - 1 page}
+
+\begin{itemize}
+	\item Briefly summarize the key findings from the Exploratory Data Analysis (EDA).
+	\item Reflect on the extent to which the original aim of the study specified in the Introduction was achieved: Was the recommendation system successful in meeting its objectives?
+	\begin{itemize}
+	\item Please note that the aim is not necessarily to develop a perfect recommender system. You can provide critical insights here and suggest future strategies for enhancing its performance.
+\end{itemize}
+\end{itemize}
+
+\subsection{Quality of the writing, adherence to APA guidelines and references}
+
+Ensure the report is clearly written and adheres to APA guidelines. Including references to related academic work, if relevant, is appreciated.
+
+\subsection{Appendix: Division of labor}
+
+\textit{Approximatly 0.5 page}
+
+We believe it's essential for all team members to contribute equally to the group assignment. 
+Therefore, in the Appendix, we request each team member to provide a brief description of their individual contributions to the group assignment. These contributions should be honestly reflected and cover the elements each team member worked on.
+
+	
+\section{All code written in the project (35\% of final grade)}
+
+\subsection{Code for data preprocessing}
+\begin{itemize}
+	\item Code used to read in the data, explore the dataset, and inspect the relevant variables present.
+	\item Your objective here is to select variables that might be of interest and usable later on.
+	\item The code for cleaning and preprocessing your data is crucial here. Feature engineering plays a significant role in this step, considering the type of descriptive analysis you plan to conduct in the subsequent stages.
+\end{itemize}
+
+\subsection{Code for Exploratory Data Analysis (EDA)}
+\begin{itemize}
+\item Provide code to conduct exploratory data analysis (EDA) on the dataset.
+\item Ensure that the code yields a clear description of the data you will be analyzing, highlighting key variables such as their data types, number of unique observations, mean values, and distribution characteristics.
+\item Utilize data visualization techniques, such as plotting, to visually represent relationships and patterns within the dataset.
+\item Apply various analytical techniques discussed in the first weeks of the course, such as topic modeling, to uncover insights and themes present in the dataset.
+\end{itemize}
+
+\subsection{Code to create a recommender system}
+
+\begin{itemize}
+	\item Provide the code to build a simple knowledge-based or content-based recommender system. 
+	\item Specifically, you have to provide code that builds a recommender system, based on the insights from week 3. It's up to you to decide whether you build a knowledge-based or content-based recommender system.
+	\item Think about relevant features that you want to use in your algorithm design. Based on which features do you want to recommend content?
+\end{itemize}
+
+\section{Quality of the code, and documentation (15\% of final grade)}
+
+Make sure your code is well documented and understandable for people that see your code for the first time. This involves providing clear and concise comments within the code to explain its purpose and functionality.
+This requires providing clear and concise comments within the code to explain its purpose and functionality. Additionally, strive to minimize code repetition and enhance scalability where feasible.
+
+
+\section{Handing in}
+One member of your group can hand in the group assignment until Monday, 6 May, 11:00 AM via Canvas. \textbf{Please compress all files into a single .zip or .tar.gz file} 
+
+Please include the following files:   
+\section*{File formats}
+
+\begin{itemize}
+	\item  A set of scripts used to preprocess and analyse the data, and to build the recommender system
+	\item \emph{
+		You can hand in the answer to task 2 \emph{either} as \underline{one} Jupyter Notebook-file, integrating code, output, and explanations \emph{or} as one .py file containing the Python code and one PDF file with output and explanations.
+	}
+	\item The written research report should be .pdf format
+\end{itemize}
+
+\emph{Note: You may, but do \textbf{not} have to create a shared (public) github repository where you store all code and documentation. In that case, please include the link to the github repository together with the written assignment to your tutorial teacher.}
+
+\textbf{Compress all files into one single .zip or .tar.gz file with your group name!}
+If you want to compress your files on Linux, you can do so as follows. Imagine you have a folder called '/home/anne/groupassignment' in which you have everything you want to hand in, you can do
+
+\begin{lstlisting}
+cd /home/anne
+tar -czf /home/anne/Desktop/groupassignment-team1.tar.gz groupassignment
+\end{lstlisting}
+to create a file \texttt{groupassignment-team1tar.gz} on your Desktop.
+
+
+~\\
+\textbf{\emph{Good luck!!!}}
