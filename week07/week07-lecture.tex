@@ -1,0 +1,533 @@
+%\documentclass[handout]{beamer}
+\documentclass[compress]{beamer}
+
+\input{../resources/preamble}
+\addbibresource{../resources/literature.bib}
+\graphicspath{{../resources/pictures/}}
+
+\title[Computational Communication Science 2]{\textbf{Computational Communication Science 2} \\Week 7 - Lecture\\ »Coding in an academic context«}
+\author[Marthe Möller]{a.m.moller@uva.nl}\author[A. Marthe Möller]{Marthe Möller \\ ~ \\ \footnotesize{a.m.moller@uva.nl} \\}
+\date{May 13, 2024}
+\institute[Digital Society Minor, University of Amsterdam]{Digital Society Minor, University of Amsterdam}
+
+\begin{document}
+	
+\begin{frame}{}
+		\titlepage
+\end{frame}
+	
+\begin{frame}{Today}
+	\begin{tiny}
+		\tableofcontents
+	\end{tiny}
+\end{frame}
+
+
+\section{Recap}
+
+\begin{frame}[fragile]{Recap} 
+	
+\begin{alertblock}{Techniques you now master:}
+\begin{itemize}
+	\item Text as data
+	\item Recommender systems
+	\item Supervised machine learning
+\end{itemize}
+\end{alertblock}
+
+\begin{alertblock}{Today, we:}
+\begin{itemize}
+	\item Reflect on computational methods and validation
+	\item Discuss responsible coding
+\end{itemize}
+\end{alertblock}
+\end{frame}
+
+
+\begin{frame}[fragile]{Recap} 	
+Last week, we  talked about validation. \\
+Validation: How well does the model work?
+\end{frame}
+
+
+\begin{frame}[fragile]{Recap} 	
+\begin{alertblock}{Validation metrics:}
+	\begin{itemize}
+		\item Precision (How much of what we found is correct?)
+		\item Recall (How many of the cases that we wanted to find did we find?)
+		\item Accuracy (In which percentage of all cases was the model correct?)
+		\item F1-score (Harmonic mean of precision and recall)
+	\end{itemize}
+\end{alertblock}
+\end{frame}
+
+
+\begin{frame}[fragile]{Recap} 	
+Validation using metrics such as recall and precision pertains to how well the model reflects the data it was trained on. \\
+\end{frame}
+
+
+\section{A critical reflection}
+
+\begin{frame}[fragile]{Assessing the performance of models} 	
+Validation using metrics such as recall and precision pertains to how well the model reflects the data it was trained on. \\
+Could this be problematic? What do you think?
+\end{frame}
+
+
+\begin{frame}[fragile]{Problems associated to comparison with training data: 1} 	
+\begin{alertblock}{Training data can be biased due to bad input}
+	\begin{itemize}
+		\item Training data can be of poor quality
+	\end{itemize}
+\end{alertblock}
+\end{frame}
+
+% If the quality of the coding is low, training a machine that perfectly matches this means that you train a machine to reproduce low-quality annotations.
+
+\begin{frame}[fragile]{Bad-quality training data} 	
+	\begin{alertblock}{Poor quality coding}
+		\begin{itemize}
+			\item The definition of concepts is unclear
+			\item Characteristics of a coding-task may increase bias (e.g., length)
+			\item Concepts are subjective: The ground truth itself is biased (e.g., Hube et al., 2019; Van der Velden et al., 2023; Webb Williams et al., 2023)
+			\item Basile et al. (2023): Perspectivism-approach
+		\end{itemize}
+	\end{alertblock}
+\end{frame}
+
+% When concepts are not clearly defined for coders, inter coder reliability is likely to be low. If humans cannot agree on concepts, a computer is unlikely to be able to do so.
+% Often, training data serve as a ground truth, created by "expert" coders. These are usualy scientists, which are usually white males who are highly educated. This in itself introduces bias to the ground truth and thereby, to the training data.
+% Scholars (such as Basile et al.) argue for taking a perspectivism-approach instead, whereby different groups of annotators are compared. Bias, in this case, refers to the deviation between annotations of different groups. This way, scholars can take into account different perspectives.
+
+\begin{frame}[fragile]{Problems associated to comparison with training data: 1} 	
+	\begin{alertblock}{Training data can be biased due to bad input}
+		\begin{itemize}
+			\item Training data can be of poor quality
+			\item Training data may not be representative
+		\end{itemize}
+	\end{alertblock}
+\end{frame}
+
+\begin{frame}[fragile]{Unrepresentative training data} 	
+	\begin{alertblock}{Sources of training data}
+		\begin{itemize}
+			\item Training data are typically gathered from the internet and specific platforms, introducing bias (Bender et al., 2021)
+			\item Moderations on platforms can prevent marginalised groups from being heard (Bender et al., 2021)
+		\end{itemize}
+	\end{alertblock}
+\end{frame}
+
+% Not everybody has access to the internet, so not everybody's voice is heard. Most data in our field comes from social media, thus reflecting the viewpoints of their largest user group: young people from rich countries
+% However unintentionnaly, platform moderations often filter out non-populair views and sometimes filter out people by banning the topics they discuss (e.g., LGHBQ+ people who talk about sexuality)
+
+
+\begin{frame}[fragile]{Problems associated to comparison with training data: 1} 	
+	\begin{alertblock}{Training data can be biased due to bad input}
+		\begin{itemize}
+			\item Coding can be of poor quality
+			\item Training data may not be representative
+		\end{itemize}
+	\end{alertblock}
+The above can lead to models that only represent certain viewpoints held by certain groups.
+\end{frame}
+
+
+\begin{frame}[fragile]{Problems associated to comparison with training data: 2} 	
+	\begin{alertblock}{No consideration for the costs and benefits of training models}
+		\begin{itemize}
+			\item CO2-emissions
+		\end{itemize}
+	\end{alertblock}
+\end{frame}
+
+\begin{frame}[fragile]{Costs and benefits} 	
+	\begin{alertblock}{CO2-emissions}
+		\begin{itemize}
+			\item Training large models requires a lot of computing power and leads to CO2-emissions (Bender et al., 2021)
+			\item The consequences of this are mostly felt by already marginalized groups (Bender et al., 2021)
+		\end{itemize}
+	\end{alertblock}
+\end{frame}
+
+% CO2-emissions impact the climate; these consequences such as floods or drought are mostly felt by poorer communities
+
+\begin{frame}[fragile]{Problems associated to comparison with training data: 2} 	
+	\begin{alertblock}{No consideration for the costs and benefits of training models}
+		\begin{itemize}
+			\item CO2-emissions
+			\item Unequal access to resources
+		\end{itemize}
+	\end{alertblock}
+\end{frame}
+
+\begin{frame}[fragile]{Costs and benefits} 	
+	\begin{alertblock}{Unequal access to resources}
+		\begin{itemize}
+			\item Not all researchers have equal access to the resources for developing computational models (Baden et al., 2021; Bender et al., 2021)
+			\item Not all non-researchers have equal access to the resources for using computational models (Bender et al., 2021)
+		\end{itemize}
+	\end{alertblock}
+\end{frame}
+
+% Not all researchers have equal access: Scholars working in non-English countries, for example, experience the drawbacks as models are mostly trained on English data. Also, models are most suitable for manifest constructs and are increasingly developed to study these. Scholars focusing on latent concepts (communication scientists!) are experiencing the drawbacks of this.
+% In turn, when models are used in society, this is mostly done in the richer societies that have the money for this.
+
+\begin{frame}[fragile]{Problems associated to comparison with training data: 2} 	
+	\begin{alertblock}{No consideration for the costs and benefits of training models}
+		\begin{itemize}
+			\item CO2-emissions
+			\item Unequal access to resources
+		\end{itemize}
+	\end{alertblock}
+The above leads to increased societal differences and inequality.
+\end{frame}
+
+
+\begin{frame}[fragile]{Problems associated to comparison with training data: 3} 	
+	\begin{alertblock}{Metrics say nothing about how a model works}
+		\begin{itemize}
+			\item Latent constructs
+		\end{itemize}
+	\end{alertblock}
+\end{frame}
+
+\begin{frame}[fragile]{Metrics say nothing about how a model works} 	
+	\begin{alertblock}{Latent constructs (Baden et al., 2021)}
+		\begin{itemize}
+			\item Social scientists measure complex constructs that can be measured in various ways
+			\item For theory development, we need to know how concepts are measured
+			\item Measurement validity versus technological performance
+		\end{itemize}
+	\end{alertblock}
+\end{frame}
+
+% Scores on metrics such as recall do not tell us how a model measures a construct. But this knowledge is required if we want to develop our theories. So far, the focus in the field has been on what a machine can do (technological performance) instead of on whether it does so well (measurement validity)
+
+\begin{frame}[fragile]{Problems associated to comparison with training data: 3} 	
+	\begin{alertblock}{Metrics say nothing about how a model works}
+		\begin{itemize}
+			\item Latent constructs
+			\item Theoretical concepts
+		\end{itemize}
+	\end{alertblock}
+\end{frame}
+
+\begin{frame}[fragile]{Metrics say nothing about how a model works} 	
+	\begin{alertblock}{Theoretical concepts (Baden et al., 2021)}
+		\begin{itemize}
+			\item Focus on detecting single and simple constructs instead of multiple and complex ones
+			\item Difficult to get a holistic view
+			\item Scholars often have to combine models to study their complext constructs
+		\end{itemize}
+	\end{alertblock}
+\end{frame}
+
+% The above causes that theoretical distinctions are blurred, making it even more difficult to advance our theoretical understanding of the world
+
+
+\begin{frame}[fragile]{Problems associated to comparison with training data: 3} 	
+	\begin{alertblock}{Metrics say nothing about how a model works}
+		\begin{itemize}
+			\item Latent constructs
+			\item Theoretical concepts
+		\end{itemize}
+	\end{alertblock}
+The above makes it increasingly difficult to use computational methods for theory development.
+\end{frame}
+
+
+\section{Consequences of bias}
+
+\begin{frame}[fragile]{Bias in computational models}	
+We see different types of challenges associated to computational models. \\
+For society, are these actually problems? Why (not)?
+\end{frame}
+
+\begin{frame}[fragile]{Consequences of bias} 	
+\begin{center}
+	\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{../pictures/toeslagenaffaire_headlines.png} 
+\end{center}
+\end{frame}
+
+\section{Validation revised}
+
+\begin{frame}[fragile]{A broader view on bias} 	
+Bias is not only about how well a model can mimic training data. It is also about evaluating the process underlying it.
+\end{frame}
+
+\begin{frame}[fragile]{Potential remedies} 	
+	\begin{alertblock}{Invest in better training data 1}
+		\begin{itemize}
+			\item Reflect on who provided the training data: e.g., who has access to the platforms that you gathered the data from? (Bender et al., 2022)
+			\item Explain and argue for all the pre-processing steps that were taken, e.g., exclusion of specific language (Baden et al., 2022)
+			\item Explicitely state your approach dependent on the concepts studied: Perspectivism-approach or a Ground-truth approach (Basile et al., 2023)
+			\item Invest more resources into different approaches to validation (Baden et al., 2022)
+		\end{itemize}
+	\end{alertblock}
+\end{frame}
+
+\begin{frame}[fragile]{Potential remedies} 	
+	\begin{alertblock}{Invest in better training data 2}
+		\begin{itemize}
+			\item Systematically study how bias can be mitigated
+			\item Hube et al. (2019): Task characteristics can also be a remedy!
+		\end{itemize}
+	\end{alertblock}
+\end{frame}
+
+
+\begin{frame}[fragile]{Potential remedies} 	
+	\begin{alertblock}{Consider costs and benefits}
+		\begin{itemize}
+			\item Report the time it took to train models (Bender et al., 2022)
+			\item Add efficiency as an evaluation metric (Bender et al., 2022)
+			\item Reflect on who the developed models can be valuable for (Bender et al., 2022)
+		\end{itemize}
+	\end{alertblock}
+\end{frame}
+
+
+\begin{frame}[fragile]{Potential remedies} 	
+	\begin{alertblock}{Theory development}
+		\begin{itemize}
+			\item Clearly define and operationalize the constructs you are studying (Baden et al., 2022)
+			\item Include scholars in the development of methods (Baden et al., 2022)
+		\end{itemize}
+	\end{alertblock}
+\end{frame}
+
+
+\section{Pulling your weight}
+
+\begin{frame}[fragile]{Potential remedies} 	
+	Key to implementing the remedies listed in the previous section, is Open Science. 
+\end{frame}
+
+\begin{frame}[fragile]{Open Science} 	
+	Open Science is the movement that aims at more open and collaborative research practices in which publications, data, software and other types of academic output are shared at the earliest possible stage and made available for reuse. Open Science leads to greater scientific and societal impact. (NWO, 2024) 
+\end{frame}
+
+\begin{frame}[fragile]{Open Science} 	
+	Key to Open Science in this context, is sharing your code.
+\end{frame}
+
+\begin{frame}[fragile]{Open Science} 	
+	\begin{alertblock}{Sharing your code is useful because:}
+		\begin{itemize}
+			\item Increases the transparency of your own projects
+			\item Increases the availability of and access to materials
+			\item Reduces the need to keep reinventing the wheel
+		\end{itemize}
+	\end{alertblock}
+\end{frame}
+
+\begin{frame}[fragile]{Open Science} 	
+	Sharing your code is only useful if it is reproducible.
+\end{frame}
+
+\begin{frame}{Reproducible code}
+	\begin{alertblock}{Reproducble code is:}
+		\begin{itemize}
+			\item Clear
+			\item Readible
+			\item Efficient
+		\end{itemize}
+	\end{alertblock}
+\end{frame}
+
+% Easier to read but slightly slower code is better than faster but indecipherable code
+% Because:
+% Easier to understand
+% More efficient use of computer power
+% Easier to maintain, scale, debug
+% Requires less documentation
+
+
+% for 2024: for the tips below, only select a few
+
+\begin{frame}{Open Computational Science}
+	1. Document your code
+\end{frame}
+
+\begin{frame}{Open Computational Science}
+	Documentation debt: "When we rely on ever larger datasets we risk incurring documentation debt, i.e. putting ourselves in a situation where the datasets are both undocumented and too large to document post hoc." (Bender et al., p. 615)
+	
+	%Bender et al., p. 615, section 4.4
+\end{frame}
+
+\begin{frame}[fragile]{Source Acknowledgement}
+	
+	\begin{lstlisting}		
+		"""
+		In your code, you can use """ or # to create  a comment explaining your code. For example, to say that you are using a scraper developed by A. Person (2015), which can be found on www.somewebsite.com
+		"""
+	\end{lstlisting}
+\end{frame}
+
+
+\begin{frame}[fragile]{Writing reproducible code}
+	
+	2. Create functions  (instead of repeating code)
+	
+	Not:
+	\begin{lstlisting}		
+		# Rerun this code three times, once for each name:
+		# Mike, Elsa, and Minna
+		
+		print("[change name here] is cool!")
+	\end{lstlisting}
+	
+	But:
+	\begin{lstlisting}		
+		names = ["Mike", "Elsa", "Minna"]
+		
+		def cool_caller(name):
+		print(name + " is cool!")
+		
+		for name in names:
+		cool_caller(name)
+	\end{lstlisting}
+	
+	
+	%Increases readibility
+	% You can call the same function again later on below in the code
+	%Makes code easier to maintain (only one function needs to be updated)
+\end{frame}
+
+\begin{frame}{Writing reproducible code}
+	
+	3. Avoid hard-coding values
+	
+	Not:
+	"myfile.csv" or 50 within your script. \\\
+	
+	But: \\\
+	OUTPUTFILE ="myfile.csv" \\\
+	MAXNUMBER=50
+\end{frame}
+
+
+
+\begin{frame}{Writing reproducible code}
+	
+	4. Use built-in functions and libraries 
+	
+	And load all modules/packages at the start of your code
+	
+	%No need to reinvent the wheel, but:
+	%Clearly indicate what packages  you are using (at the start of your code)
+	%Give credit where credit is due, using comments
+	
+	%Keep track of the versions of libraries that you use in comments
+	
+\end{frame}
+
+\begin{frame}{Writing reproducible code}
+	
+	6. Use informative names for files and variables (check out PEP8!)
+	
+	% By using _ and - strategically, you can use regex on filenames
+\end{frame}
+
+
+\begin{frame}{Writing reproducible code}
+	
+	7. Keep lines of code fairly short
+	
+	% Keeps your code clearer and easier to debug
+	
+\end{frame}
+
+
+\begin{frame}{Writing reproducible code}
+	
+	8. Write code that makes sense to others, and it will make sense to the future you as well.
+	
+\end{frame}
+
+
+
+\section{Looking Back and Ahead}
+
+\begin{frame}{Looking back} 
+	
+	You started with the basics (e.g., what is a list, how to save data, write a loop).\\
+	\begin{alertblock}{In two months, you learned:}
+		\begin{itemize}
+			\item How to read in data
+			\item How to preprocess data
+			\item How transform text into data that a computer can understand
+			\item How to compare texts to provide a recommendation
+			\item How to analyze text to classify it automatically		
+		\end{itemize}
+	\end{alertblock}	
+\end{frame}
+
+
+\begin{frame}{Looking at the very near future} 
+	
+	\begin{alertblock}{Two grades for this course remain:}
+		\begin{itemize}
+			\item The last MC-questions 
+			\item The take-home exam 
+		\end{itemize}
+	\end{alertblock}	
+\end{frame}
+
+\begin{frame}{Looking at the near future} 
+	\begin{alertblock}{	Final course of the minor: the research project!}
+		\begin{itemize}
+			\item You will combine your programming skills with your skills as a researcher
+			\item Run a research project about ComScience using the materials you created for the group assignment in this course
+			\item More information follows in the first meeting of the research project
+		\end{itemize}
+	\end{alertblock}
+\end{frame}
+
+
+\begin{frame}{Looking at the future} 
+	
+	CCS-1 and CCS-2: An introduction to coding. You can continue to learn and work with Python.\\
+	No course materials and instructors to help you out, but there are a lot of resources online!\\
+	\begin{alertblock}{Our tips:}
+		\begin{itemize}
+			\item Error message? Google is your best friend!
+			\item Check out the documentation of any module that you use to learn how it works
+			\item Check out pubs using the method you are interested in. Often, they publish their python scripts (e.g., Meppelink et al., 2021)
+		\end{itemize}
+	\end{alertblock}	
+\end{frame}
+
+
+\begin{frame}{Looking at the future} 
+	
+	When you use your computational skills for your thesis or any other project, you are part of the research community. You add value to your own work by making it accessible and understandable for others!
+	
+\end{frame}
+
+
+\begin{frame}{Looking at the future} 
+	
+	We taught you basic principles and techniques that underly frequently used methods. These techniques develop and change constantly - make sure that you stay updated on them!
+	
+	% E.g., deep learning, developments in UML
+	
+\end{frame}
+
+
+
+\begin{frame}{Looking at the future} 
+	
+	We taught you how to drive, now you can go out and explore the world of computational (communication) science!
+	
+\end{frame}
+
+
+\begin{frame}{Looking at the future} 
+	
+	Thank you for the past weeks and enjoy the research project!
+	
+\end{frame}
+
+\end{document}
