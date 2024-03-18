@@ -29,31 +29,31 @@ Please find detailed information about these components next.
 
 \section{Write a research report (50\% of final grade)}
 
-Ensure that the research report is written in a clear and understandable manner. It is encouraged to include citations from relevant academic articles to support your analysis. Additionally, you may cite the book (\cite{van_atteveldt_computational_2022}} )to justify specific techniques or decisions made. The research report is structured into four sections:
+Ensure that the research report is written in a clear and understandable manner. It is encouraged to include citations from relevant academic articles to support your analysis. Additionally, you may cite the book \citep{van_atteveldt_computational_2022} to justify specific techniques or decisions made. The research report is structured into four sections:
 
 \subsection{Introduction}
 \textit{Approximatly 0.5 - 1 page}
 \begin{itemize}
 	\item Briefly explain why you chose the specific dataset. 
 	\item Highlight its relevance, potential insights, and why it is the most interesting for your group's objectives.
-	\item State the overall aim of the Recommender system that you will develop in this assignment.
+	\item State the overall aim of the Recommender System that you will develop in this assignment.
 	\begin{itemize}
-		\item For example, the Recommender System may focus on generating personalized book recommendations tailored to users' preferences, genres, and other users' behavior. Depending on the data you work with, this could be aimed at promoting reading habits or facilitating the sharing of relevant news within the community.
+		\item \emph{For example, the Recommender System may focus on generating personalized book recommendations tailored to users' preferences, genres, and other users' behavior. Depending on the data you work with, this could be aimed at promoting reading habits or facilitating the sharing of relevant news within the community}.
 	\end{itemize}
 \end{itemize}
 
 
-\subsection{Method Section}
+\subsection{Method section}
 \textit{Approximatly 2.5 - 4.5 pages}
 
-\paragraph{Data Preprocessing}
+\paragraph{Data preprocessing}
 \begin{itemize}
     \item Provide a detailed description of  the final selection of variables, including their data types and any transformations applied.
-    \item Explain the reasoning behind the approach taken for data preprocessing. Explain to your reader \emph{why} these preprocessing steps are needed. You can think of the following reasons:
+    \item Explain the reasoning behind the approach taken for data preprocessing. Explain to your reader \emph{why} these preprocessing steps are needed. You can think of the following reasons to apply preprocessing (see also the next section):
         \begin{itemize}
-            \item Visualizing the data: This helps to identify outliers, trends, or patterns within the dataset.
-            \item Computing summary statistics: This aids in understanding the distribution, central tendencies, and variability of variables.
-            \item Employing inductive techniques like topic modeling: This is particularly useful for textual data, where it helps to uncover underlying themes or topics.
+            \item Visualizing the data.
+            \item Computing summary statistics.
+            \item Inductive techniques like topic modeling.
         \end{itemize}
   \item Explain clearly how the preprocessing steps are needed for the successful exectution of these techniques. 
 \end{itemize}
@@ -64,9 +64,9 @@ Ensure that the research report is written in a clear and understandable manner.
     \item Explain how these techniques will be used to gain insights into the dataset.
 	\item Justify the selection of these techniques and their relevance to the dataset. For example:
 	\begin{itemize}
-		\item Visualizing the data assists in detecting data quality issues or anomalies.
-		\item Summary statistics provide insights into the overall characteristics of the dataset.
-		\item Inductive techniques like topic modeling help in extracting meaningful information from unstructured textual data.
+		\item Visualizing the data: This helps to identify outliers, trends, or patterns within the dataset.
+		\item Summary statistics: This helps in understanding the distribution, central tendencies, and variability of variables.
+		\item Inductive techniques like topic modeling: Useful for textual data, so to uncover underlying themes and topics.
 	\end{itemize}
 \end{itemize}
 
@@ -77,7 +77,7 @@ Ensure that the research report is written in a clear and understandable manner.
 \begin{itemize}
 \item Specifically, explain whether you will build a knowledge-based or a content-based recommender system, and justify the choice of techniques used to create the recommendations. For example, you may choose to use cosine scores or soft-cosine scores.
 \item Additionally, clarify which variables are included in the final recommendations and why they were selected.
-\item Explain how the selected techniques will be utilized to build the recommender system.
+\item Explain how the selected techniques will be used to build the recommender system.
 \end{itemize}
 \item Justify the suitability of the chosen recommender system type for addressing the objectives of the assignment as described in the Introduction section. 
 \end{itemize}
@@ -89,7 +89,7 @@ Ensure that the research report is written in a clear and understandable manner.
 \item Provide a comprehensive description of the dataset, including the number of observations and the types of variables present.
 \item Present the results of the Explorative Data Analysis (EDA) conducted on the dataset. 
 \begin{itemize}
-	\item This may include insights gained from visualization, summary statistics, or inductive methods like topic modeling. Describe patterns or trends that you have discovered during this analysis.
+	\item This may include insights gained from visualization, summary statistics, and/or inductive methods like topic modeling. Describe patterns or trends that you have discovered during this analysis.
 \end{itemize}
 \item Demonstrate the functionality of the developed recommender system. 
 \begin{itemize}
@@ -150,8 +150,7 @@ Therefore, in the Appendix, we request each team member to provide a brief descr
 \section{Quality of the code, and documentation (15\% of final grade)}
 
 Make sure your code is well documented and understandable for people that see your code for the first time. This involves providing clear and concise comments within the code to explain its purpose and functionality.
-This requires providing clear and concise comments within the code to explain its purpose and functionality. Additionally, strive to minimize code repetition and enhance scalability where feasible.
-
+This requires providing clear and concise comments within the code to explain its purpose and functionality. Additionally, minimize code repetition and provide that is scalable if possible. 
 
 \section{Handing in}
 One member of your group can hand in the group assignment until Monday, 6 May, 11:00 AM via Canvas. \textbf{Please compress all files into a single .zip or .tar.gz file} 
