@@ -1,0 +1,62 @@
+\documentclass[handout]{beamer}
+
+%\documentclass[compress]{beamer}
+
+\input{../resources/preamble}
+\addbibresource{../resources/literature.bib}
+\graphicspath{{../resources/pictures/}}
+
+\title[Computational Communication Science 2]{\textbf{Computational Communication Science 2} \\Week 3 - Lecture\\ »LDA and Recommender systems«}
+\author[Anne Kroon]{Anne Kroon \\ ~ \\ \footnotesize{ a.c.kroon@uva.nl, @annekroon} \\}
+\date{April 15, 2024}
+\institute[Digital Society Minor, University of Amsterdam]{Digital Society Minor, University of Amsterdam}
+
+\begin{document}
+	
+	\begin{frame}{}
+		\titlepage
+	\end{frame}
+	0
+	\begin{frame}{Today}
+		\begin{tiny}
+		\tableofcontents
+		\end{tiny}
+	\end{frame}
+
+\question{Everything clear from last weeks?}
+
+
+	\begin{frame}{Main points from last week}
+		\begin{alertblock}{I assume that by now, everybody knows:}
+			\begin{itemize}[<+>]
+				\item how to clean and preprocess textual data;
+				\item how to vectorize the data;
+				\item how to calculate cosine similarity using different techniques;
+			\end{itemize}
+		\end{alertblock}
+	\end{frame}
+
+\input{../modules/topicmodels}
+
+\begin{frame}[plain]
+	
+	\begin{block}{Exercise for this week's lab session}
+		\footnotesize
+		\begin{itemize}
+			\item Work through the example notebook on LDA: \url{https://github.com/uva-cw-ccs2/2324s2/blob/main/week03/exercise/topic-modelling.ipynb}
+			\end{itemize}
+	\end{block}
+\end{frame}
+
+\input{../modules/recommender}
+
+\begin{frame}[standout]
+Have fun!
+\end{frame}
+
+\begin{frame}[t,allowframebreaks]
+	\frametitle{References}
+	\printbibliography
+\end{frame}
+
+\end{document}
