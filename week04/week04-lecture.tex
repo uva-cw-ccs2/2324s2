@@ -31,10 +31,24 @@ Week 1 - 3: Text as data and recommender systems \\\
 Use Python to set up an experiment (research project)!
 \end{frame}
 
+\begin{frame}[fragile]{What we did so far}
+Group assignment: Tomorrow's tutorial is last chance for questions \\\
+
+Next week is education-free week: This means that there are no lectures, tutorials, or responses to Github issues.
+\end{frame}
+
 \begin{frame}[fragile]{What we will do next}
 Week 4 - 8: Automated analysis of text with Supervised Machine Learning \\\
-
+	
 Use Python to analyze texts - and reflect on this!
+\end{frame}
+
+\begin{frame}[fragile]{What we will do next}
+Supervised Machine Learning \\\
+
+You will use some techniques discussed in week 1-3 (e.g., vectorizing) \\\
+
+Instead of building something to use in an experiment, we directly analyze textual data.
 \end{frame}
 
 
@@ -112,7 +126,7 @@ When you simply want to count the occurence of specific words, a rule-based appr
 \begin{alertblock}{Advantages of rule-based text classification:}
 	\begin{itemize}
 		\item Simple and therefore transparant
-		\item Cheap
+		\item Computationally cheap (more about this in week 7!)
 	\end{itemize}
 
 \end{alertblock}
@@ -137,7 +151,7 @@ When you simply want to count the occurence of specific words, a rule-based appr
 
 \begin{frame}{From Rule-based to Automated}
 	
-When it is easy for humans to decide to what class a text belongs, but we struggle to translate our decision process into straight-forward rules, we are likely to be better of using a form of automated text classification: Supervised Machine Learning.
+When it is easy for us humans to decide to what class a text belongs, but we cannot transform our decision process into clear rules, it is probably better to use an automated form of text analysis: Supervised Machine Learning (Van Atteveldt et al., 2022)
 	
 \end{frame}
 
@@ -157,8 +171,7 @@ When it is easy for humans to decide to what class a text belongs, but we strugg
 \end{center}
 	
 \begin{tiny}
-	Read more about this project in: 
-	\fullcite{sermanet_overfeat_2014} 
+Read more about this project in: Sermanet, P., Eigen, D., Zhang, X., Mathieu, M., Fergus, R., \& LeCun, Y.(2014). OverFeat: Integrated recognition, localization and detection using convolutional networks. arXiv:1312.6229[cs]. Retrieved December 23, 2021, from http://arxiv.org/abs/1312.6229
 \end{tiny}
 \end{frame}
 
@@ -166,7 +179,7 @@ When it is easy for humans to decide to what class a text belongs, but we strugg
 
 \begin{frame}{What is ML?} 
 	
-Machine Learning: “a type of artificial intelligence in which computers use huge amounts of data to learn how to do tasks rather than being programmed to do them.” \\\
+Machine Learning: “A type of artificial intelligence in which computers use huge amounts of data to learn how to do tasks rather than being programmed to do them.” \\\
 	
 \begin{tiny}
 	Oxford Dictionary
@@ -176,21 +189,15 @@ Machine Learning: “a type of artificial intelligence in which computers use hu
 
 \begin{frame}{What is SML?} 
 	
-Supervised Machine Learning (SML): “A form of machine learning, where we aim to predict a variable that, for a least part of our data is known.” \\\
-	
-\begin{tiny}
-	\fullcite{van_atteveldt_computational_2022} 
-\end{tiny}
+Supervised Machine Learning (SML): “A form of machine learning, where we aim to predict a variable that, for a least part of our data is known." (Van Atteveldt et al., 2022) \\\
+
 \end{frame}
 
 
 \begin{frame}{What is SML?} 
 
-“The goal of Supervised Machine Learning: estimate a model based on some data, and then use the model to predict the expected outcome for some new cases, for which we do not know the outcome yet.” \\\
-	
-\begin{tiny}
-	\fullcite{van_atteveldt_computational_2022} 
-\end{tiny}
+“The goal of Supervised Machine Learning: Estimate a model based on some data, and then use the model to predict the expected outcome for some new cases, for which we do not know the outcome yet.” (Van Atteveldt et al., 2022) \\\
+
 \end{frame}
 
 
@@ -212,6 +219,7 @@ Machine Learning has a lot of similarities to regression analysis!
 \begin{alertblock}{Next, we will talk about:}
 \begin{itemize}
 	\item The principles behind SML
+	\item A practical application of SML
 	\item Some commonly used SML models
 \end{itemize}
 \end{alertblock}	
@@ -226,11 +234,11 @@ Machine Learning has a lot of similarities to regression analysis!
 
 \pause
 
-\(y\) = Is this a dog? ( 0 = definitely no, 1 = definitely yes)
+\(y\) = Is this a dog? (0 = definitely no, 1 = definitely yes) \\\
 \pause
-\(x_1\) = bark? (0= no, 1 = yes) \\\
+\(x_1\) = Does it bark? (0 = no, 1 = yes) \\\
 \pause
-\(x_2\) = tail? (0 = no, 1 = yes) \\\
+\(x_2\) = Does it have a tail? (0 = no, 1 = yes) \\\
 	
 \end{frame}
 
@@ -259,14 +267,6 @@ Machine Learning has a lot of similarities to regression analysis!
 \pause
 	
 Classification: a predictive modeling problem where a class label is predicted for a given example of input data. 
-\end{frame}
-
-
-\begin{frame}{The principles behind SML}
-	
-\begin{center}
-	\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{../pictures/MLlingo.png} \\\
-\end{center}	
 \end{frame}
 
 
@@ -371,9 +371,8 @@ Today, more about the first step! \\\
 \begin{center}
 	\includegraphics{../pictures/Zhangetal_1.png} \\\
 \end{center}
-	
 \begin{tiny}
-	\fullcite{zhang_whose_2019} 
+Zhang, Y., Shah, D., Foley, J., Abhishek, A., Lukito, J., Suk, J., Kim, S. J., Sun, Z., Pevehouse, J., \& Garlough, C.(2019). Whose lives matter? mass shootings and social media discourses of sympathy and policy, 2012–2014.Journal of Computer-Mediated Communication, 24(4), 182–202. https://doi.org/10.1093/jcmc/zmz009
 \end{tiny}
 \end{frame}
 
@@ -383,9 +382,8 @@ Today, more about the first step! \\\
 \begin{center}
 	\includegraphics{../pictures/Zhangetal_2.png} \\\
 \end{center}
-	
 \begin{tiny}
-	\fullcite{zhang_whose_2019} 
+Zhang, Y., Shah, D., Foley, J., Abhishek, A., Lukito, J., Suk, J., Kim, S. J., Sun, Z., Pevehouse, J., \& Garlough, C.(2019). Whose lives matter? mass shootings and social media discourses of sympathy and policy, 2012–2014.Journal of Computer-Mediated Communication, 24(4), 182–202. https://doi.org/10.1093/jcmc/zmz009
 \end{tiny}
 		
 \end{frame}
@@ -396,9 +394,8 @@ Today, more about the first step! \\\
 \begin{center}
 	\includegraphics{../pictures/Zhangetal_3.png} \\\
 \end{center}
-	
 \begin{tiny}
-	\fullcite{zhang_whose_2019} 
+Zhang, Y., Shah, D., Foley, J., Abhishek, A., Lukito, J., Suk, J., Kim, S. J., Sun, Z., Pevehouse, J., \& Garlough, C.(2019). Whose lives matter? mass shootings and social media discourses of sympathy and policy, 2012–2014.Journal of Computer-Mediated Communication, 24(4), 182–202. https://doi.org/10.1093/jcmc/zmz009
 \end{tiny}	
 \end{frame}
 
@@ -431,11 +428,11 @@ Four lists:
 	
 \begin{lstlistingoutput}
 
-tweets\_train = ['Tweet about shooting', 'Another tweet', 'Shooting!']
-tweets\_test = ['One more tweet']
+tweets_train = ['Tweet about shooting', 'Another tweet', 'Shooting!']
+tweets_test = ['One more tweet']
 
-y\_train = [1, 0, 1]	
-y\_test = [0]	
+y_train = [1, 0, 1]	
+y_test = [0]	
 
 \end{lstlistingoutput}
 \end{frame}
@@ -629,19 +626,16 @@ How do you know what is the best for your case? Try it out and validate!
 
 \begin{frame}[fragile]{Zooming out} 
 	
-\begin{alertblock}{Tomorrow and this week, you will:}
+\begin{alertblock}{Tomorrow, you will:}
 	\begin{itemize}
-		\item Get some hands-on experience with supervised machine learning!
+		\item Have time to ask questions regarding the group assignment
+		\item In addition, work on the tutorial exercises for this week and ask questions if you have them
+		\item You will get some hands-on experience with supervised machine learning!
 	\end{itemize}
 \end{alertblock}
 
-Work on the the tutorial exercises for this week. \\\
 \end{frame}
 
-\begin{frame}
-	\frametitle{Refs}
-	\printbibliography
-\end{frame}
-	
+
 
 \end{document}
